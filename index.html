@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Green</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background: rgb(24, 93, 45);
+            background: linear-gradient(229deg, rgba(24, 93, 45, 1) 8%, rgba(116, 213, 45, 1) 80%);
+        }
+
+        .con {
+            align-items: center;
+            margin: 50px auto;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 3px solid #fff;
+            background-color: #82c07f;
+            height: 400px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+            position: relative;
+        }
+
+        input {
+            padding: 15px;
+            margin: 20px auto;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .remForgot {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px auto;
+        }
+
+        input[type=submit] {
+            text-align: center;
+            background-color: #07301a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type=checkbox] {
+
+            color: #fff;
+            border: none;
+            padding: 0;
+            width: 10px;
+            margin: 0;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        .box {
+
+            width: 85%;
+            margin: 10px auto;
+        }
+
+        img {
+            width: 75px;
+            height: 75px;
+            margin: -30px auto;
+            display: block;
+
+        }
+
+        .email,
+        .pass {
+            position: relative;
+        }
+
+        .fa-envelope:before,
+        .fa-lock::before {
+            position: absolute;
+
+            font-size: 30px;
+            top: 53px;
+            /* left: 202px; */
+            right: 10px;
+            opacity: 0.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .fa-circle-user:before,
+        .fa-user-circle:before {
+            content: "\f2bd";
+            font-size: 75px;
+            position: absolute;
+            top: -43px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <i class="fa-solid fa-circle-user"></i>
+        <div class="box">
+
+            <form action="">
+                <div class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="Emaildata" aria-label="Email" placeholder="Email">
+                </div>
+                <div class="pass">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="Passworddata" id="pass" aria-label="PassWord" placeholder="Password">
+                </div>
+                <div class="remForgot">
+                    <div class="Check">
+                        <input type="checkbox" name="Check" id="remember">
+                        <label for="remember">Remember Me</label>
+
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <input type="submit" value="Login">
+
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector('input[type=email]').addEventListener("focus", function () {
+            document.querySelector('.fa-envelope').style.opacity = "0";
+
+        });
+        document.querySelector('input[type=email]').addEventListener("blur", function () {
+            document.querySelector('.fa-envelope').style.opacity = "1";
+
+        });
+
+        document.querySelector('input[type=password]').addEventListener("focus", function () {
+            document.querySelector('.fa-lock').style.opacity = "0";
+        });
+        document.querySelector('input[type=password]').addEventListener("blur", function () {
+            document.querySelector('.fa-lock').style.opacity = "1";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
